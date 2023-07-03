@@ -15,12 +15,9 @@ function compressImage(filePath, outputFilePath, quality = 80) {
     });
 }
 
-async function createOutputFolder(outputFolderPath) {
-  try {
-    await fs.promises.mkdir(outputFolderPath, { recursive: true });
-  } catch (err) {
-    // handle error
-    console.error(err);
+function createOutputFolder(outputFolderPath) {
+  if (!fs.existsSync(outputFolderPath)) {
+    fs.mkdirSync(outputFolderPath, { recursive: true });
   }
 }
 

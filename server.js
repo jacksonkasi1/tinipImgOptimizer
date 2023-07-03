@@ -1,7 +1,11 @@
 const fs = require("fs");
 const path = require("path");
 const imageExtensions = [".png", ".jpg", ".jpeg", ".gif", ".webp"];
-const { createOutputFolder, handleDirectory, handleFile } = require("./utils");
+const {
+  createOutputFolder,
+  handleDirectory,
+  handleFile,
+} = require("./utils");
 
 const inputFolderPath = "./assets";
 const outputFolderPath = "output_folder";
